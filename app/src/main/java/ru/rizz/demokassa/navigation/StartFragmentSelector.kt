@@ -6,7 +6,7 @@ import javax.inject.*
 class StartFragmentSelector @Inject constructor(
 	private val mFragmentFactory: FragmentFactory,
 	private val mFragmentContainer: FragmentContainer,
-	private val mUserRepository: IUserRepository
+	private val mUserRepository: IUserRepositoryReadOnly
 ) : IStartFragmentSelector {
 
 	override suspend operator fun invoke() {

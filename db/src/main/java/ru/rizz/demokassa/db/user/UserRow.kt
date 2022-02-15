@@ -3,9 +3,12 @@ package ru.rizz.demokassa.db.user
 import androidx.room.*
 
 @Entity(tableName = "users")
-class UserRow {
-
-	@ColumnInfo(collate = ColumnInfo.NOCASE, name = "code")
+internal data class UserRow(
 	@PrimaryKey
-	var code: String = ""
-}
+	@ColumnInfo(collate = ColumnInfo.NOCASE)
+	val id: String,
+
+	val name: String,
+	val password: String,
+	val isAdmin: Boolean,
+)

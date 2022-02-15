@@ -6,11 +6,11 @@ import ru.rizz.demokassa.db.user.*
 @Database(
 	version = BuildConfig.DATABASE_VERSION_CODE,
 	exportSchema = false,
-	entities = arrayOf(
+	entities = [
 		UserRow::class
-	)
+	]
 )
-abstract class MainDatabase : RoomDatabase() {
+internal abstract class MainDatabase : RoomDatabase() {
 
 	abstract fun users(): UserDao
 }

@@ -7,7 +7,7 @@ import ru.rizz.demokassa.navigation.*
 
 @Module
 @InstallIn(ActivityComponent::class)
-interface FirstFragmentSelectorModule {
+interface StartFragmentSelectorModule {
 
 	@Binds
 	fun startFragmentSelector(value: StartFragmentSelector): IStartFragmentSelector

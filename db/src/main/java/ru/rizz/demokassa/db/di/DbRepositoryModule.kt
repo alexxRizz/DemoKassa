@@ -1,4 +1,4 @@
-package ru.rizz.demokassa.di
+package ru.rizz.demokassa.db.di
 
 import dagger.*
 import dagger.hilt.*
@@ -8,8 +8,11 @@ import ru.rizz.demokassa.model.repositories.*
 
 @Module
 @InstallIn(SingletonComponent::class)
-interface DbRepositoryModule {
+internal interface DbRepositoryModule {
 
 	@Binds
 	fun users(value: UserRepository): IUserRepository
+
+	@Binds
+	fun usersReadOnly(value: UserRepository): IUserRepositoryReadOnly
 }

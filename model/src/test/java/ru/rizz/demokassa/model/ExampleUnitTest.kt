@@ -1,7 +1,6 @@
 package ru.rizz.demokassa.model
 
-import org.junit.Test
-
+import org.junit.*
 import org.junit.Assert.*
 
 /**
