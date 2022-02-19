@@ -1,4 +1,4 @@
-package ru.rizz.demokassa.navigation
+package ru.rizz.demokassa.ui.navigation
 
 import android.content.*
 import androidx.annotation.*
@@ -41,12 +41,15 @@ class FragmentContainer @Inject constructor(
 	}
 
 	fun pop() {
-		mFragmentManager.popBackStack()
+		if (mFragmentManager.backStackEntryCount > 1)
+			mFragmentManager.popBackStack()
+		// Если остался 1 фрагмент, то намеренно не выходим из приложения,
+		// т.к. это стандартная практика для kiosk-mode приложений.
 	}
 
-	fun <T : Fragment> popTo(fragmentType: Class<T>) {
-		mFragmentManager.popBackStack(fragmentType.name, 0)
-	}
+	//	fun <T : Fragment> popTo(fragmentType: Class<T>) {
+	//		mFragmentManager.popBackStack(fragmentType.name, 0)
+	//	}
 
 	fun clear() {
 		repeat(mFragmentManager.backStackEntryCount) {

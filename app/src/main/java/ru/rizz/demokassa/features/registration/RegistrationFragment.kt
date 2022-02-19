@@ -4,8 +4,8 @@ import androidx.fragment.app.*
 import dagger.hilt.android.*
 import ru.rizz.demokassa.R
 import ru.rizz.demokassa.databinding.*
-import ru.rizz.demokassa.features.common.*
 import ru.rizz.demokassa.features.registration.RegistrationVM.*
+import ru.rizz.demokassa.ui.*
 
 @AndroidEntryPoint
 class RegistrationFragment : FragmentBase<RegistrationVM, Event, ScreenRegistrationBinding>() {
@@ -13,7 +13,10 @@ class RegistrationFragment : FragmentBase<RegistrationVM, Event, ScreenRegistrat
 	override val layoutId = R.layout.screen_registration
 	override val vm by viewModels<RegistrationVM>()
 
+	override fun onViewCreated() {
+	}
+
 	override fun onEvent(ev: Event) = when (ev) {
-		else -> {}
+		Event.ExitFromRegistrationClicked -> screens.showMainMenu()
 	}
 }

@@ -1,21 +1,24 @@
-package ru.rizz.demokassa
+package ru.rizz.demokassa.ui
 
 import android.os.*
 import androidx.appcompat.app.*
 import androidx.lifecycle.*
 import dagger.hilt.android.*
 import kotlinx.coroutines.*
-import ru.rizz.demokassa.navigation.*
+import ru.rizz.demokassa.R
+import ru.rizz.demokassa.ui.navigation.*
 import javax.inject.*
 
 @AndroidEntryPoint
 class MainFragmentActivity : AppCompatActivity() {
 
 	private lateinit var mStartFragmentSelector: IStartFragmentSelector
+	private lateinit var mScreens: Screens
 
 	@Inject
-	fun init(startFragmentSelector: IStartFragmentSelector) {
+	fun init(startFragmentSelector: IStartFragmentSelector, screens: Screens) {
 		mStartFragmentSelector = startFragmentSelector
+		mScreens = screens
 	}
 
 	override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,9 +32,6 @@ class MainFragmentActivity : AppCompatActivity() {
 	}
 
 	override fun onBackPressed() {
-		if (supportFragmentManager.backStackEntryCount > 1)
-			super.onBackPressed()
-		// Намеренно не выходим из приложения при нажатии на back,
-		// т.к. это стандартная практика для kiosk-mode приложений.
+		mScreens.back()
 	}
 }

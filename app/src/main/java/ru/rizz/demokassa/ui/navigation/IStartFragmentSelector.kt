@@ -1,4 +1,4 @@
-package ru.rizz.demokassa.navigation
+package ru.rizz.demokassa.ui.navigation
 
 interface IStartFragmentSelector {
 

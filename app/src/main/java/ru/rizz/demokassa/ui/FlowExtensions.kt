@@ -1,4 +1,4 @@
-package ru.rizz.demokassa.features.common
+package ru.rizz.demokassa.ui
 
 import androidx.lifecycle.*
 import kotlinx.coroutines.*

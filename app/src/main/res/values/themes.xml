@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!-- Base application theme. -->
   <style name="Theme.DemoKassa" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <!-- *** System attrs *** -->
     <!-- Primary brand color. -->
     <item name="colorPrimary">@color/blue</item>
     <item name="colorPrimaryVariant">@color/dark_blue</item>
@@ -10,7 +11,14 @@
     <item name="colorSecondaryVariant">@color/dark_blue</item>
     <item name="colorOnSecondary">@color/white</item>
     <!-- Status bar color. -->
-    <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-    <!-- Customize your theme here. -->
+    <item name="android:statusBarColor" tools:targetApi="l">?attr/topBarColor</item>
+    <!-- Other -->
+    <item name="android:textColor">?attr/textColor</item>
+
+    <!-- *** Custom attrs *** -->
+    <item name="textColor">@color/black</item>
+    <item name="separatorColor">?attr/colorPrimary</item>
+    <item name="topBarColor">@color/dark_blue2</item>
+    <item name="iconColor">?attr/colorPrimary</item>
   </style>
 </resources>

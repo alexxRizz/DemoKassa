@@ -36,4 +36,8 @@ dependencies {
   implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
   implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
   implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion"
+
+  // *** sdp, ssp
+  implementation "com.intuit.sdp:sdp-android:1.0.6"
+  implementation "com.intuit.ssp:ssp-android:1.0.6"
 }

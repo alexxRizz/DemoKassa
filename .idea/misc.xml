@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/drawable/ic_back.xml" value="0.1775" />
+        <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/drawable/ic_launcher_background.xml" value="0.129" />
+        <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/drawable/ic_refund.xml" value="0.129" />
+        <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/drawable/ic_sell.xml" value="0.1775" />
+        <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/drawable/ic_settings.xml" value="0.129" />
+        <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/drawable/ic_user.xml" value="0.138" />
         <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
+        <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/row_main_menu_item.xml" value="0.24010416666666667" />
         <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/screen_login.xml" value="0.2364102564102564" />
         <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/screen_main_menu.xml" value="0.24010416666666667" />
         <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/screen_registration.xml" value="0.24010416666666667" />
@@ -16,7 +23,7 @@
       <item index="1" class="java.lang.String" itemvalue="dagger.Module" />
     </list>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
