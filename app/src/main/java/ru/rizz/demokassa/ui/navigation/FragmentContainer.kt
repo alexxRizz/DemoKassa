@@ -35,6 +35,12 @@ class FragmentContainer @Inject constructor(
 	fun push(fragment: Fragment) {
 		mFragmentManager.commit {
 			setReorderingAllowed(true)
+			setCustomAnimations(
+				R.anim.enter,
+				R.anim.exit,
+				R.anim.pop_enter,
+				R.anim.pop_exit
+			)
 			replace(mFragmentContainerId, fragment)
 			addToBackStack(fragment.javaClass.name)
 		}
