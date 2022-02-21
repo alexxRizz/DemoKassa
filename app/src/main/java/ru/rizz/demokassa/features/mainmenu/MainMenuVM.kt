@@ -23,15 +23,16 @@ class MainMenuVM @Inject constructor() : ViewModelBase() {
 	private lateinit var mMenuFactory: MainMenuFactory
 
 	val menuVM = MutableLiveData<MainMenu>()
-	val titleVM = menuVM.map { it.title }
-	val showBackButtonVM = menuVM.map { it.type != MainMenu.Type.Root }
 
 	fun onCreate(menuType: MainMenu.Type) {
 		mMenuFactory = MainMenuFactory(::sendEvent)
-		menuVM.value = mMenuFactory.new(menuType)
+		val menu = mMenuFactory.new(menuType)
+		topBarVM.title.value = menu.title
+		topBarVM.showBackButton.value = menu.type != MainMenu.Type.Root
+		menuVM.value = menu
 	}
 
-	fun onBack() =
+	override fun onBackClick() =
 		sendEvent(Event.BackClicked)
 
 	fun onItemClick(pos: Int) =

@@ -31,6 +31,7 @@ abstract class FragmentBase<
 	final override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 		binding = DataBindingUtil.inflate(inflater, layoutId, container, false)
 		binding.lifecycleOwner = viewLifecycleOwner
+		binding.setVariable(BR.topBarVM, vm.topBarVM)
 		binding.setVariable(BR.vm, vm)
 		return binding.root
 	}

@@ -21,6 +21,9 @@ class Screens @Inject constructor(
 				push(it)
 		}
 
+	fun back() =
+		pop()
+
 	private fun clearAndPush(fragment: Fragment) =
 		with(mFragmentContainer) {
 			clear()
@@ -30,7 +33,6 @@ class Screens @Inject constructor(
 	private fun push(fragment: Fragment) =
 		mFragmentContainer.push(fragment)
 
-	fun back() {
+	private fun pop() =
 		mFragmentContainer.pop()
-	}
 }
