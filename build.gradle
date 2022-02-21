@@ -37,7 +37,7 @@ subprojects {
     options.compilerArgs.add("-Xlint:overloads")
     options.compilerArgs.add("-Xlint:overrides")
     options.compilerArgs.add("-Xlint:unchecked")
-    //options.compilerArgs.add("-Werror")
+    options.compilerArgs.add("-Werror")
   }
   tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
     // kotlinOptions.freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
@@ -59,12 +59,12 @@ def applyAndroid(project) {
     }
 
     compileOptions {
-      sourceCompatibility JavaVersion.VERSION_11
-      targetCompatibility JavaVersion.VERSION_11
+      sourceCompatibility JavaVersion.VERSION_1_8
+      targetCompatibility JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-      jvmTarget = JavaVersion.VERSION_11
+      jvmTarget = JavaVersion.VERSION_1_8
     }
 
     buildTypes {
@@ -82,10 +82,11 @@ def applyAndroid(project) {
     kapt "com.google.dagger:hilt-compiler:$hiltVersion"
     implementation "com.google.dagger:hilt-android:$hiltVersion"
 
-    // *** hilt testing
+    // *** hilt local testing
     kaptTest "com.google.dagger:hilt-compiler:$hiltVersion"
     testImplementation "com.google.dagger:hilt-android-testing:$hiltVersion"
 
+    // *** hilt instrumentation testing
     kaptAndroidTest "com.google.dagger:hilt-compiler:$hiltVersion"
     androidTestImplementation "com.google.dagger:hilt-android-testing:$hiltVersion"
 
