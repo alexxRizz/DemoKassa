@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <style name="RowSeparator">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">1dp</item>
+    <item name="android:layout_marginTop">@dimen/rowVerticalPadding</item>
+    <item name="android:background">?attr/colorPrimary</item>
+  </style>
 
+  <style name="FloatingButton" parent="@style/Widget.MaterialComponents.FloatingActionButton">
+    <item name="android:layout_width">@dimen/floatingButtonSize</item>
+    <item name="android:layout_height">@dimen/floatingButtonSize</item>
+    <item name="fabCustomSize">@dimen/floatingButtonSize</item>
+    <item name="maxImageSize">@dimen/_30sdp</item>
+  </style>
 </resources>

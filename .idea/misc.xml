@@ -9,11 +9,15 @@
         <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/drawable/ic_sell.xml" value="0.1775" />
         <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/drawable/ic_settings.xml" value="0.129" />
         <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/drawable/ic_user.xml" value="0.138" />
+        <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/drawable/ic_user_add.xml" value="0.1295" />
         <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
         <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/row_main_menu_item.xml" value="0.24010416666666667" />
+        <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/row_user.xml" value="0.24010416666666667" />
         <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/screen_login.xml" value="0.2364102564102564" />
         <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/screen_main_menu.xml" value="0.24010416666666667" />
         <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/screen_registration.xml" value="0.24010416666666667" />
+        <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/screen_user_list.xml" value="0.24010416666666667" />
+        <entry key="..\:/My/Projects/DemoKassa/app/src/main/res/layout/top_bar.xml" value="0.24010416666666667" />
       </map>
     </option>
   </component>

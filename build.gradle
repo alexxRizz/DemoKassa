@@ -30,6 +30,23 @@ subprojects {
       applyAndroid(project)
     }
   }
+
+  tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    options.compilerArgs.add("-Xlint:deprecation")
+    options.compilerArgs.add("-Xlint:overloads")
+    options.compilerArgs.add("-Xlint:overrides")
+    options.compilerArgs.add("-Xlint:unchecked")
+    //options.compilerArgs.add("-Werror")
+  }
+  tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    // kotlinOptions.freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
+    // kotlinOptions.freeCompilerArgs += "-Xopt-in=kotlin.ExperimentalUnsignedTypes"
+    // kotlinOptions.freeCompilerArgs += "-Xopt-in=kotlin.contracts.ExperimentalContracts"
+    // kotlinOptions.freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"
+    // kotlinOptions.freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.DelicateCoroutinesApi"
+    kotlinOptions.allWarningsAsErrors = true
+  }
 }
 
 def applyAndroid(project) {

@@ -30,9 +30,9 @@ class MainMenuFragment : FragmentBase<MainMenuVM, Event, ScreenMainMenuBinding>(
 		is Event.ToastRequested -> viewService.showToast(ev.text)
 		Event.SellClicked -> screens.showRegistration()
 		is Event.SubmenuClicked -> screens.showMainMenu(ev.menuType)
-		Event.SettingsClicked -> viewService.showToast("Настройки")
 		Event.RefundNoChequeClicked -> viewService.showToast("Возврат без чека")
 		Event.RefundWithChequeNumberClicked -> viewService.showToast("Возврат по номеру чека")
 		Event.RefundWithChequeQrCodeClicked -> viewService.showToast("Возврат по qr-коду чека")
+		Event.UserListClicked -> screens.showUserList()
 	}
 }

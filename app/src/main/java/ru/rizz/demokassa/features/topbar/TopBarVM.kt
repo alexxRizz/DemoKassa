@@ -5,6 +5,6 @@ import androidx.lifecycle.*
 class TopBarVM {
 	val isVisible = MutableLiveData(true)
 	val title = MutableLiveData("")
-	val showBackButton = MutableLiveData(false)
+	val showBackButton = MutableLiveData(true)
 	var onBackClick: () -> Unit = {}
 }

@@ -12,11 +12,11 @@ class MainMenuVM @Inject constructor() : ViewModelBase() {
 		object BackClicked : Event()
 		data class ToastRequested(val text: String) : Event()
 		object SellClicked : Event()
-		object SettingsClicked : Event()
 		data class SubmenuClicked(val menuType: MainMenu.Type) : Event()
 		object RefundNoChequeClicked : Event()
 		object RefundWithChequeNumberClicked : Event()
 		object RefundWithChequeQrCodeClicked : Event()
+		object UserListClicked : Event()
 	}
 
 	private val mItems get() = menuVM.value!!.items

@@ -10,6 +10,7 @@ class MainMenu(
 	enum class Type {
 		Root,
 		Refund,
+		Settings,
 	}
 }
 

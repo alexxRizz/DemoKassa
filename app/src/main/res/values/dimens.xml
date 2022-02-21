@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <dimen name="small_padding">@dimen/_5sdp</dimen>
   <dimen name="padding">@dimen/_10sdp</dimen>
-  <dimen name="menuItemVerticalPadding">@dimen/_5sdp</dimen>
+  <dimen name="rowVerticalPadding">@dimen/_5sdp</dimen>
+  <dimen name="floatingButtonSize">@dimen/_50sdp</dimen>
 </resources>

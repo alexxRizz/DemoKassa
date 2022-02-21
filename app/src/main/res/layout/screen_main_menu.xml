@@ -2,11 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
   <data>
     <variable name="vm" type="ru.rizz.demokassa.features.mainmenu.MainMenuVM"/>
-    <variable name="topBarVM" type="ru.rizz.demokassa.features.topbar.TopBarVM"/>
   </data>
 
   <androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/padding">
@@ -14,7 +12,7 @@
     <include
       android:id="@+id/topBar"
       layout="@layout/top_bar"
-      app:vm="@{topBarVM}"/>
+      app:vm="@{vm.topBarVM}"/>
 
     <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/recycler"
@@ -27,6 +25,5 @@
       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
       tools:listitem="@layout/row_main_menu_item"
     />
-
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
